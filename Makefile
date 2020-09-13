@@ -24,3 +24,6 @@ back:
 
 back-install:
 	docker-compose exec backend sh -c "composer install"
+
+back-test:
+	docker-compose exec backend sh -c "vendor/phpunit/phpunit/phpunit --no-configuration tests"
