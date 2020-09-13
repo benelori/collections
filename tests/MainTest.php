@@ -15,6 +15,6 @@ class MainTest extends TestCase
 
         $actual = $main->getCollection();
 
-        self::assertEquals($expected, $actual);
+        self::assertEquals($expected, $actual->normalize()->all());
     }
 }

@@ -13,17 +13,14 @@ class Main
      */
     public function __construct()
     {
-        $collection = Collection::with(['A', 'B', 'C', 'D', 'E']);
+        // Collection::with() is perfectly valid but will be deprecated soon.
+        $collection = Collection::fromIterable(['A', 'B', 'C', 'D', 'E']);
 
         $this->collection = $collection
-            ->append('F', 'G', 'H')
-            ->all(); // ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+            ->append('F', 'G', 'H');
     }
 
-    /**
-     * @return array
-     */
-    public function getCollection()
+    public function getCollection(): \loophp\collection\Contract\Collection
     {
         return $this->collection;
     }
