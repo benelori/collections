@@ -1,0 +1,21 @@
+{
+    "name": "local/oop",
+    "require": {
+        "phpunit/phpunit": "^9.3",
+        "loophp/collection": "^2.5"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    }
+}

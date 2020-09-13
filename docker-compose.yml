@@ -1,0 +1,8 @@
+version: '3.5'
+
+services:
+  backend:
+    image: upstain/php:latest
+    working_dir: /app
+    volumes:
+      - ./:/app
